@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Селекторы</title>
+    <base target="_blank">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-top">
+            <img class="logo" src="images/CSS3_logo.svg.png" alt="логотип css">
+            <div class="top-info">
+                <h1>CSS</h1>
+                <h2>СЕЛЕКТОРЫ И ИХ КОМБИНАЦИИ</h2>
+            </div>
+        </div>
+        <div class="text element">
+            <a href="https://webref.ru/css/selector/tag">По названию элемента</a>
+            <ul>
+                <li>Этот селектор выбирает тип элементов, к которым будут применяться CSS-правила.</li>
+                <li><strong>Пример:</strong> селектор <span>img</span>  выберет все элементы <span>&lt;img&gt;</span>, которые есть в Вашем документе и применит к ним заданые Вами правила форматирования.</li>
+            </ul>
+        </div>
+        <div class="text id">
+            <a href="https://webref.ru/css/selector/id">По id (идентификатору)</a>
+            <ul>
+                <li>Этот селектор выбирает элементы, основываясь на значении их id атрибута. Не забывайте, что идентификатор должен быть уникальным, т. е. использоваться только для одного элемента в HTML-документе.</li>
+                <li><strong>Пример:</strong> селектор <span>#selector-picture</span> выберет элемент с идентификатором selector-picture (который был определён в атрибуте <span>id="selector-picture"</span>).</li>
+            </ul>
+        </div>
+        <div class="text class">
+            <a href="https://webref.ru/css/selector/class">По классу</a>
+            <ul>
+                <li>Этот селектор выбирает элементы, основываясь на значении их атрибута class.</li>
+                <li><strong>Пример:</strong> селектор <span>.element</span> выберет все элементы с соответствующим классом (который был определён в атрибуте <span>class="element"</span>).</li>
+            </ul>
+        </div>
+        <div class="text multiclass">
+            <a href="https://webref.ru/css/selector/multiclass">По нескольким классам</a>
+            <ul>
+                <li>К любому тегу одновременно можно добавить несколько классов, перечисляя их в атрибуте class через пробел. В этом случае к элементу применяется стиль, описанный в правилах для каждого класса.</li>
+                <li><strong>Пример:</strong> <span>&lt;E class="class1 class2 ..."&gt;</span> В стилях допустимо использовать запись следующего вида <span>.class1.class2 { Описание правил стиля }</span>. В таком случае стиль применяется только для элементов, у которых одновременно заданы классы class1 и class2.</li>
+            </ul>
+        </div>
+        <div class="text universal">
+            <a href="https://webref.ru/css/selector/universal">Универсальный селектор</a>
+            <ul>
+                <li>Выбирает все элементы. По желанию, он может быть ограничен определённым пространством имён или относиться ко всему пространству имён.</li>
+                <li><strong>Пример:</strong> <span>*</span> будет соответствовать всем элементам на странице.</li>
+            </ul>
+        </div>
+        <div class="text combinators">
+            <a href="https://webref.ru/css/selector/descendant">Вложенные селекторы</a>
+            <ul>
+                <li>Выбирает элементы, которые находятся внутри указанного элемента (вне зависимости от уровня вложенности).</li>
+                <li><strong>Пример:</strong> <span>ol li</span> выберет все элементы <span>&lt;li&gt;</span>, которые находятся внутри элемента <span>&lt;ol&gt;</span>.</li>
+            </ul>
+        </div>
+        <div class="text combinators">
+            <a href="https://webref.ru/css/selector/child">Дочерние селекторы</a>
+            <ul>
+                <li>Комбинатор <span>'>'</span> в отличие от пробела выбирает только те элементы, которые являются дочерними непосредственно по отношению к указанному элементу.</li>
+                <li><strong>Пример:</strong> селектор <span>ol &gt; li выберет только дочерние элементы &lt;li&gt;, которые находятся внутри, на первом уровне вложенности по отношению к элементу &lt;ol&gt;.</span></li>
+            </ul>
+        </div>
+        <div class="text combinators">
+            <a href="https://webref.ru/css/selector/adjacent">Соседние селекторы</a>
+            <ul>
+                <li>Комбинатор <span>'+'</span> выбирает элемент, который находится непосредственно после указанного элемента, если у них общий родитель.</li>
+                <li><strong>Пример:</strong> селектор <span>ul + li</span> выберет любой <span>&lt;li&gt;</span> элемент, который  находится непосредственно после элемента <span>&lt;ol&gt;</span>.</li>
+            </ul>
+        </div>
+        <div class="text combinators">
+            <a href="https://webref.ru/css/selector/sibling">Родственные селекторы</a>
+            <ul>
+                <li>Комбинатор <span>'~'</span> выбирает элементы, которые находятся на этом же уровне вложенности, после указанного элемента, с тем же родителем.</li>
+                <li><strong>Пример:</strong> <span>li ~ span</span> выберет все элементы <span>&lt;span&gt;</span>, которые находятся после элемента <span>&lt;li&gt;</span> внутри одного родителя.</li>
+            </ul>
+        </div>
+        <div class="text attributes">
+            <a href="http://htmlbook.ru/samcss/selektory-atributov">Селекторы атрибутов</a>
+            <p>Этот селектор выбирает все элементы, имеющие данный атрибут или атрибут с определённым значением.</p>
+            <p>Типы:</p>
+            <ol>
+                <li>[attr]</li>
+                <li>[attr='value']</li>
+                <li>[attr^='value']</li>
+                <li>[attr$='value']</li>
+                <li>[attr*='value']</li>
+                <li>[attr~='value']</li>
+                <li>[attr|='value']</li>
+            </ol>
+            <p><strong>Примеры:</strong></p>
+            <ol>
+                <li>Селектор [border] выберет все элементы, у которых есть  атрибут border (независимо от его значения).</li>
+                <li>[target='_blank'], в таком случае стиль применяется ко всем тегам, которые содержат указанное значение.</li>
+                <li>[href^="https://"] выберет все ссылки, у которых адрес начинается на "https".</li>
+                <li>[src$=".png"] выберет все картинки, у которых адрес заканчивается на ".png".</li>
+                <li>[href*="webref"], конструкция <span id="col-yellow">*=</span> определяет, что значение атрибута содержит указанный текст в начале, середине или конце.</li>
+                <li>[class~="ref"] cтиль применяется в том случае, если у атрибута имеется указанное значение или оно входит в список значений, разделяемых пробелом</li>
+                <li>[class|="block"] Стиль применяется к элементам, у которых атрибут начинается с указанного значения или с фрагмента значения, после которого идёт дефис</li>
+            </ol>
+        </div>
+        <div class="text addinfo">
+            <h2>Смотрите также</h2>
+            <a href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Selectors" class="ref color-red">CSS-селекторы|</a>
+            <a href="https://webref.ru/css" class="ref color-brown">Справочник CSS|</a>
+            <a href="https://habr.com/ru/post/137588/" class="ref color-red">Специфичность селекторов|</a>
+            <a href="https://github.com/yoksel/common-words" class="ref color-brown">Слова, часто используемые в CSS-классах</a>
+        </div>
+        <img src="images/selectors.png" id="selectors-picture" alt="css selectors">
+    </div>
+    
+</body>
+</html>

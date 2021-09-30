@@ -1,0 +1,106 @@
+body {
+    background-color: powderblue;
+    font-size: 16;
+    font-weight: normal;
+    font-family:fantasy;
+}
+
+.container {
+    max-width: 90%;
+    margin: auto;
+    padding-top: 30px;
+}
+.page-top {
+    display: flex;
+}
+
+.logo {
+    width: 100px;
+}
+
+.top-info {
+    margin-left: 30px;
+}
+
+.top-info h2 {
+    color:rgb(5, 99, 41);
+}
+
+.text {
+    padding: 10px;
+    margin-top: 20px;
+}
+
+a {
+    color: rgba(3, 59, 11, 0.986);
+    font-size: 20px;
+}
+
+span {
+    color: darkred;
+}
+
+.element {
+    background-color: rgb(124, 165, 241);
+}
+
+
+.id {
+    background-color: rgb(96, 146, 238);
+}
+
+.class {
+    background-color: rgb(73, 135, 250);
+}
+
+.multiclass {
+    background-color: rgb(46, 115, 243);
+}
+
+.universal {
+    background-color: rgb(19, 97, 241)
+}
+
+.combinators {
+    background-color: pink;
+}
+
+.attributes {
+    background-color: darkorchid;
+}
+
+ol li {
+    color: deepskyblue;
+}
+
+#col-yellow {
+    color: yellow;
+}
+
+.addinfo {
+    background-color: rgb(10, 131, 46);
+}
+
+.ref {
+    font-size: 15px;
+}
+
+.color-red {
+    color: red;
+}
+
+.color-brown {
+    color: brown;
+}
+
+.ref.color-red {
+    text-decoration-line: none;
+}
+
+#selectors-picture {
+    position:absolute;
+    width: 100px;
+    bottom: 630px;
+    right: 30px;
+}
+
